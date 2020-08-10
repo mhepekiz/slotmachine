@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slot Machine</title>
+
+    <!-- I'm not sure about to use Jquery but I call it here
+    to use it if I decided to develop a hybrid game  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
     <link rel="stylesheet" href="css/main.css">
     <script defer src="js/main.js"></script>
 </head>
@@ -20,14 +26,18 @@
                         <div class="digit1" id="digit1">0</div>
                         <div class="digit2" id="digit2">0</div>
                     </div>
-                    <div class="bet-button"><button class="betbtn" id="betbtn">BET</button></div>
-                    <div class="spin-button"><button class="spinbtn" id="spinbtn">SPIN</button></div>
+                    <div class="bet-button"><button class="betBtn" id="betBtn">BET</button></div>
+                    <div class="spin-button"><button class="spinBtn" id="spinBtn">SPIN</button></div>
+                    <div class="stop-button"><button class="stopBtn" id="stopBtn">STOP</button></div>
+                    <div class="playAgain-button"><button class="playAgn" id="playAgn">PLAY AGAIN</button></div>
+
+
                 </div>
                 <div class="good-luck">GOOD LUCK Y'ALL!</div>
-                <div class="info-box">YOU WON!</div>
-                <div class="total-bet">0</div>
+                <div class="infoBox" id="infoBox"></div>
+                <div class="total-bet" id="totalBet">0</div>
                 <div class="player-info">PLAYER 1</div>
-                <div class="credits">100</div>
+                <div class="totalCredit" id="totalCredit">100</div>
             
 
         </div>
