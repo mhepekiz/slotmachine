@@ -3,10 +3,10 @@
 
 /*----- constants -----*/
 
-const beepAudio = new Audio('http://soundbible.com/mp3/Robot_blip-Marianne_Gagnon-120342607.mp3');
-const shootAudio = new Audio('http://soundbible.com/mp3/shooting_star-Mike_Koenig-1132888100.mp3');
-const slotMac = new Audio('http://soundbible.com/mp3/slot-machine-daniel_simon.mp3');
-
+const spinSound = new Audio("sounds/spin.mp3");
+const randMin = 1;
+const randMax = 10;
+const gamePlayTimeOut = 40;
 
 
 /*----- app's state (variables) -----*/
@@ -14,14 +14,16 @@ const slotMac = new Audio('http://soundbible.com/mp3/slot-machine-daniel_simon.m
 let credit, result;
 let bet = 0;
 let credits = 100;
-
+const dgt0 = document.querySelector('#digit0');
+const dgt1 = document.querySelector('#digit1');
+const dgt2 = document.querySelector('#digit2');
 
 /*----- cached element references -----*/
 
-// const cashEls = {
-//     b: document.getElementById('b-bet'),
-//     c: document.getElementById('c-credit')
-// }
+const cashEls = {
+    b: document.getElementById('b-bet'),
+    c: document.getElementById('c-credit')
+}
 
 
 
@@ -29,7 +31,7 @@ let credits = 100;
 
 document.getElementById('betBtn').addEventListener('click', addBet);
 document.getElementById('spinBtn').addEventListener('click', render);
-document.getElementById('stopBtn').addEventListener('click', function(){ alert('Stop Button Clicked') });
+document.getElementById('stopBtn').addEventListener('click', stop);
 document.getElementById('playAgn').addEventListener('click', init);
 
 
@@ -72,24 +74,40 @@ function init() {
     gameMes ('This is a new adventure for you!');
   }
 
-function spinNow(a,b) {
 
-    for (var i = 0; i <= 10; i++) {
-        (function(j) {
-           setTimeout(function() {
-            document.querySelector('#digit' + a).textContent = j; }, (b * j));
-      })(i);
-     }
+  function gamePlay(){
+    
+        let dig0 = randomInt(randMin, randMax);
+        dgt0.innerHTML = '<img src="imgs/' + dig0 + '.png">';
+        let dig1 = randomInt(randMin, randMax);
+        dgt1.innerHTML = '<img src="imgs/' + dig1 + '.png">';
+        let dig2 = randomInt(randMin, randMax);
+        dgt2.innerHTML = '<img src="imgs/' + dig2 + '.png">';
+        spinCounter = spinCounter + 1;        
+        if(spinCounter<40){
+         setTimeout(gamePlay,gamePlayTimeOut); 
+        }
+
+        spinSound.play();
+
+
     }
 
-    function render() {
-   
-    spinNow(0, 80);
-    spinNow(1, 50);
-    spinNow(2, 110);
+    function render(){
+        spinCounter = 0;
+        gamePlay();
+    }
 
+    function stop(){
+        spinCounter = 40;
+        gamePlay();
+    }
+
+
+function randomInt(min, max){
+	return Math.floor((Math.random() * (max-min+1)) + min);
 }
-    
+
 function gameMes(msg){
     document.querySelector('#infoBox').textContent = msg;
 }

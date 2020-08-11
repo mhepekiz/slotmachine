@@ -1,3 +1,17 @@
 .playAgain-button {
     visibility: hidden;
 }
+
+#spinner {
+    width:100%;
+    text-align:center;
+}
+
+ul#spin {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#spin li {
+		display: inline;
+	}
