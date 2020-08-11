@@ -4,9 +4,13 @@
 /*----- constants -----*/
 
 const spinSound = new Audio("sounds/spin.mp3");
+const unluckySound = new Audio("sounds/lose.mp3");
+
 const randMin = 1;
 const randMax = 10;
 const gamePlayTimeOut = 40;
+
+
 
 
 /*----- app's state (variables) -----*/
@@ -22,22 +26,28 @@ const dgt2 = document.querySelector('#digit2');
 
 const cashEls = {
     b: document.getElementById('b-bet'),
-    c: document.getElementById('c-credit')
+    c: document.getElementById('c-credit'),
+    d: document.getElementById('betBtn'),
+    e: document.getElementById('spinBtn'),
+    f: document.getElementById('stopBtn'),
+    g: document.getElementById('playAgn')
 }
 
 
 
 /*----- event listeners -----*/
 
-document.getElementById('betBtn').addEventListener('click', addBet);
-document.getElementById('spinBtn').addEventListener('click', render);
-document.getElementById('stopBtn').addEventListener('click', stop);
-document.getElementById('playAgn').addEventListener('click', init);
+cashEls.d.addEventListener('click', addBet);
+cashEls.e.addEventListener('click', render);
+cashEls.f.addEventListener('click', stop);
+cashEls.g.addEventListener('click', init);
 
 
 /*----- functions -----*/
 
 function checkTheWinner(){
+
+        if( dgt0.innerHTML === dgt1.innerHTML ){ gameMes ('Not much unlucky!'); }
 
 }
 
@@ -62,9 +72,6 @@ function addBet () {
 function init() {
     credits = 100;
     bet = 0;
-    document.querySelector('#digit0').textContent = 0;
-    document.querySelector('#digit1').textContent = 0;
-    document.querySelector('#digit2').textContent = 0;
     document.querySelector('#totalBet').textContent = 0;
     document.querySelector('#totalCredit').textContent = 100;
     document.getElementById('playAgn').style.visibility = 'hidden';
@@ -89,6 +96,8 @@ function init() {
         }
 
         spinSound.play();
+        
+        if(spinCounter === 40){ checkTheWinner(); }
 
 
     }
@@ -102,6 +111,7 @@ function init() {
         spinCounter = 40;
         gamePlay();
     }
+
 
 
 function randomInt(min, max){
