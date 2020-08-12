@@ -83,6 +83,7 @@ function init() {
 
 
   function gamePlay(){
+
     
         let dig0 = randomInt(randMin, randMax);
         dgt0.innerHTML = '<img src="imgs/' + dig0 + '.png">';
