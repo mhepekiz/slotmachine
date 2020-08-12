@@ -50,7 +50,7 @@ header {
     top: 100px;
   }
 
-  img {
+  img.covid {
     opacity: 0.5;
   }
 
@@ -77,4 +77,66 @@ ul#spin {
     visibility: hidden;
 }
 
+
+button.betBtn {
+    border: none;
+    background-color: transparent;
+    font-family: Helvetica;
+    padding: 0;
+    cursor: pointer;
+    background-color: #ffc000;
+    color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    text-align: center;
+    line-height: 1.1;
+    width: 200px;
+    margin-bottom: 5px;
+  }
+
+
+
+  button.spinBtn {
+    border: none;
+    background-color: transparent;
+    font-family: Helvetica;
+    padding: 0;
+    cursor: pointer;
+    background-color: #ffc000;
+    color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    text-align: center;
+    line-height: 1.1;
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  .button:hover {background-color: #3e8e41}
+
+  
+
+  button.stopBtn {
+    border: none;
+    background-color: transparent;
+    font-family: Helvetica;
+    padding: 0;
+    cursor: pointer;
+    background-color: #ffc000;
+    color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    text-align: center;
+    line-height: 1.1;
+    width: 200px;
+    margin-bottom: 5px;
+  }
 
