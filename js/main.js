@@ -82,6 +82,10 @@ function init() {
   }
 
 
+  let cnt0 = 0;
+  let cnt1 = 0;
+  let cnt2 = 0;
+
   function gamePlay(){
 
     
@@ -103,6 +107,9 @@ function init() {
 
     }
 
+
+
+    
     function render(){
         spinCounter = 0;
         gamePlay();

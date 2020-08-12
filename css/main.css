@@ -1,5 +1,64 @@
-.playAgain-button {
-    visibility: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+body {
+    background-image: linear-gradient(-20deg, #cccccc, #ff0000);
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    background-color: #ffc000;
+  }
+
+  @-webkit-keyframes fadeinout {
+    50% { opacity: 1; }
+  }
+  
+  @keyframes fadeinout {
+    50% { opacity: 1; }
+  }
+
+  p {
+
+    font-family: 'Shrikhand', serif;
+    font-size: 90px;
+    color: #ff5100;
+    align-items: center;
+    -webkit-animation: fadeinout 2s linear forwards infinite;
+    animation: fadeinout 2s linear forwards infinite;
+    opacity: 0;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 90px #fff,
+    0 0 100px #fff,
+    0 0 150px #fff;
+    letter-spacing: 5px;
+    z-index: 50;
+  }
+
+  span {
+    position: relative;
+    left: -570px;
+    top: 100px;
+  }
+
+  img {
+    opacity: 0.5;
+  }
+
+
+container {
+    display: flex;
+    justify-content: center;
+
 }
 
 #spinner {
@@ -9,9 +68,13 @@
 
 ul#spin {
 	min-width: 696px;
-	list-style: none;
-	padding-top: 20px;
-	}
+	list-style: none;	}
 	ul#spin li {
 		display: inline;
-	}
+    }
+    
+.playAgain-button {
+    visibility: hidden;
+}
+
+
