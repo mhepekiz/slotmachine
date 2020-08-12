@@ -97,7 +97,10 @@ button.betBtn {
     margin-bottom: 5px;
   }
 
-
+  #betBtn:hover
+  {
+    background-color: #ff0000;
+  }
 
   button.spinBtn {
     border: none;
@@ -116,8 +119,16 @@ button.betBtn {
     line-height: 1.1;
     width: 200px;
     margin-bottom: 5px;
+    background-image: linear-gradient(rgb(138, 0, 0), rgb(255, 187, 0));
+  background-size: 100% 200%;
+  transition: background-position .3s;
   }
-  .button:hover {background-color: #3e8e41}
+
+  
+  #spinBtn:hover
+  {
+    background-position: 0 -100%;
+  }
 
   
 
@@ -140,3 +151,7 @@ button.betBtn {
     margin-bottom: 5px;
   }
 
+  #stopBtn:hover
+  {
+    background-color: #ff0000;
+  }

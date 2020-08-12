@@ -3,8 +3,12 @@
 
 /*----- constants -----*/
 
-const spinSound = new Audio("sounds/spin.mp3");
-const unluckySound = new Audio("sounds/lose.mp3");
+const spinSound = new Audio('sounds/spin.mp3');
+const unluckySound = new Audio('sounds/lose.mp3');
+const casinoSound = new Audio('sounds/casino.wav');
+
+casinoSound.loop = true;
+casinoSound.play();
 
 const randMin = 1;
 const randMax = 10;
@@ -111,6 +115,7 @@ function init() {
 
     
     function render(){
+        casinoSound.pause();
         spinCounter = 0;
         gamePlay();
     }
