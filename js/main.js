@@ -11,20 +11,15 @@ const casinoSound = new Audio('sounds/casino.wav');
 // casinoSound.play();
 
 const randMin = 1;
-const randMax = 10;
+const randMax = 3;
 const gamePlayTimeOut = 40;
-
-
-
 
 /*----- app's state (variables) -----*/
 
 let credit, result;
 let bet = 0;
 let credits = 100;
-
- 
-
+let spinCounter = 0;
 
 /*----- cached element references -----*/
 
@@ -38,8 +33,6 @@ const betButton = document.getElementById('betBtn');
 const spinButton = document.getElementById('spinBtn');
 const stopButton = document.getElementById('stopBtn');
 
-
-
 /*----- event listeners -----*/
 
 betButton.addEventListener('click', addBet);
@@ -47,12 +40,16 @@ spinButton.addEventListener('click', render);
 stopButton.addEventListener('click', stop);
 playAgain.addEventListener('click', init);
 
-
 /*----- functions -----*/
 
 function checkTheWinner(){
 
-        if( dgt0.innerHTML === dgt1.innerHTML ){ gameMes ('Not much unlucky!'); }
+        if((dgt0.innerHTML === dgt1.innerHTML) && (dgt1.innerHTML === dgt2.innerHTML) ){ gameMes ('Hay masallah!'); }
+        else if((dgt0.innerHTML === dgt1.innerHTML)){ gameMes ('Hay masallah 2!'); }
+        else if((dgt1.innerHTML === dgt2.innerHTML)){ gameMes ('Hay masallah 3!'); }
+        else { gameMes ('Bi daha dene!'); }
+       
+
 
 }
 
@@ -90,33 +87,10 @@ function init() {
   }
 
 
-  let cnt0 = 0;
-  let cnt1 = 0;
-  let cnt2 = 0;
-  let spinCounter = 0;
 
   function gamePlay(){
 
-    // let dgt = ['dgt0', 'dgt1', 'dgt2'];
-    // for (let k=0; k <=2; k++){
-    
-    // window['dig'+k] = randomInt(randMin, randMax);
-    // dgt[0].innerHTML = '<img src="imgs/' + window['dig'+k] + '.png">';
-    // spinCounter = spinCounter + 1;       
-    
-    // console.log(spinCounter);
-    // if(spinCounter<40){
-    //  setTimeout(gamePlay,gamePlayTimeOut); 
-    // }
-
-    // spinSound.play();
-    
-    // if(spinCounter === 40){ checkTheWinner(); }
-
-    // }
-    // }
-
-
+   
 
     let dig0 = randomInt(randMin, randMax);
     dgt0.innerHTML = '<img width="80" height="90" src="imgs/' + dig0 + '.png">';

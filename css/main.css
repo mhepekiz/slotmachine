@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 @media screen and (max-width: 700px){ html,body {min-width:800px} }
 
@@ -48,6 +49,23 @@ header {
     z-index: 50;
   }
 
+
+  div.showBet {
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #292929;
+    align-items: right;
+    position: relative;
+    left: 120px;
+    top: 50px;
+    z-index: 15;
+  }
+
+  
+
+
+
   span {
     position: relative;
     left: -340px;
@@ -60,14 +78,14 @@ header {
   div.console {
     position: relative;
     left: 120px;
-    top: 10px;
+    top: -50px;
     z-index: 1;
   }
 
   div.spinner {
     position: relative;
     left: 140px;
-    top: -255px;
+    top: -320px;
     z-index: 2;
   }
 
@@ -117,7 +135,7 @@ button.betBtn {
     margin-bottom: 5px;
     position: relative;
     left: 175px;
-    top: -245px;
+    top: -306px;
     z-index: 5;
   }
 
@@ -148,7 +166,7 @@ button.betBtn {
     transition: background-position .1s;
     position: relative;
     left: 277px;
-    top: -284px;
+    top: -345px;
     z-index: 8;
   }
 
@@ -179,7 +197,7 @@ button.betBtn {
     margin-bottom: 5px;
     position: relative;
     left: 380px;
-    top: -323px;
+    top: -385px;
     z-index: 8;
   }
 
