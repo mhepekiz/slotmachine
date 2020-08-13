@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
+@media screen and (max-width: 700px){ html,body {min-width:800px} }
+
+
 
 body {
-    background-image: linear-gradient(-20deg, #cccccc, #ff0000);
+    /* background-image: linear-gradient(-20deg, #3e6aac, #00a2ff); */
+    background-color: #efefef;
     height: 100vh;
     margin: 0;
 }
@@ -10,7 +14,7 @@ body {
 header {
     display: flex;
     justify-content: center;
-    height: 300px;
+    height: 150px;
     background-color: #ffc000;
   }
 
@@ -25,7 +29,7 @@ header {
   p {
 
     font-family: 'Shrikhand', serif;
-    font-size: 90px;
+    font-size: 50px;
     color: #ff5100;
     align-items: center;
     -webkit-animation: fadeinout 2s linear forwards infinite;
@@ -46,14 +50,26 @@ header {
 
   span {
     position: relative;
-    left: -570px;
-    top: 100px;
+    left: -340px;
+    top: 50px;
   }
 
   img.covid {
     opacity: 0.5;
   }
+  div.console {
+    position: relative;
+    left: 120px;
+    top: 10px;
+    z-index: 1;
+  }
 
+  div.spinner {
+    position: relative;
+    left: 140px;
+    top: -255px;
+    z-index: 2;
+  }
 
 container {
     display: flex;
@@ -77,6 +93,10 @@ ul#spin {
     visibility: hidden;
 }
 
+li.digit {
+  margin-right: 15px;  
+}
+
 
 button.betBtn {
     border: none;
@@ -90,11 +110,15 @@ button.betBtn {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     padding: 0.25em 0.75em;
     min-width: 10ch;
-    min-height: 44px;
+    min-height: 34px;
     text-align: center;
     line-height: 1.1;
-    width: 200px;
+    width: 90px;
     margin-bottom: 5px;
+    position: relative;
+    left: 175px;
+    top: -245px;
+    z-index: 5;
   }
 
   #betBtn:hover
@@ -113,21 +137,25 @@ button.betBtn {
     border-radius: 1px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     padding: 0.25em 0.75em;
-    min-width: 10ch;
-    min-height: 44px;
+    min-width: 9ch;
+    min-height: 34px;
     text-align: center;
     line-height: 1.1;
-    width: 200px;
+    width: 90px;
     margin-bottom: 5px;
-    background-image: linear-gradient(rgb(138, 0, 0), rgb(255, 187, 0));
-  background-size: 100% 200%;
-  transition: background-position .3s;
+    background-image: linear-gradient(rgb(247, 148, 0), rgb(194, 103, 0));
+    background-size: 100% 200%;
+    transition: background-position .1s;
+    position: relative;
+    left: 277px;
+    top: -284px;
+    z-index: 8;
   }
 
   
   #spinBtn:hover
   {
-    background-position: 0 -100%;
+    background-position: 0 -50%;
   }
 
   
@@ -144,11 +172,15 @@ button.betBtn {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     padding: 0.25em 0.75em;
     min-width: 10ch;
-    min-height: 44px;
+    min-height: 34px;
     text-align: center;
     line-height: 1.1;
-    width: 200px;
+    width: 90px;
     margin-bottom: 5px;
+    position: relative;
+    left: 380px;
+    top: -323px;
+    z-index: 8;
   }
 
   #stopBtn:hover

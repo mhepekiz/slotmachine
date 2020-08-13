@@ -7,8 +7,8 @@ const spinSound = new Audio('sounds/spin.mp3');
 const unluckySound = new Audio('sounds/lose.mp3');
 const casinoSound = new Audio('sounds/casino.wav');
 
-casinoSound.loop = true;
-casinoSound.play();
+// casinoSound.loop = true;
+// casinoSound.play();
 
 const randMin = 1;
 const randMax = 10;
@@ -22,29 +22,30 @@ const gamePlayTimeOut = 40;
 let credit, result;
 let bet = 0;
 let credits = 100;
-const dgt0 = document.querySelector('#digit0');
-const dgt1 = document.querySelector('#digit1');
-const dgt2 = document.querySelector('#digit2');
+
+ 
+
 
 /*----- cached element references -----*/
 
-const cashEls = {
-    b: document.getElementById('b-bet'),
-    c: document.getElementById('c-credit'),
-    d: document.getElementById('betBtn'),
-    e: document.getElementById('spinBtn'),
-    f: document.getElementById('stopBtn'),
-    g: document.getElementById('playAgn')
-}
+const dgt0 = document.querySelector('#digit0');
+const dgt1 = document.querySelector('#digit1');
+const dgt2 = document.querySelector('#digit2');
+const totalBet = document.querySelector('#totalBet');
+const totalCredit = document.querySelector('#totalCredit');
+const playAgain = document.getElementById('playAgn');
+const betButton = document.getElementById('betBtn');
+const spinButton = document.getElementById('spinBtn');
+const stopButton = document.getElementById('stopBtn');
 
 
 
 /*----- event listeners -----*/
 
-cashEls.d.addEventListener('click', addBet);
-cashEls.e.addEventListener('click', render);
-cashEls.f.addEventListener('click', stop);
-cashEls.g.addEventListener('click', init);
+betButton.addEventListener('click', addBet);
+spinButton.addEventListener('click', render);
+stopButton.addEventListener('click', stop);
+playAgain.addEventListener('click', init);
 
 
 /*----- functions -----*/
@@ -59,14 +60,14 @@ function addBet () {
      
     if(credits > 0){
         bet = bet + 10;
-        document.querySelector('#totalBet').textContent = bet;
+        totalBet.textContent = bet;
         credits = credits - 10;
-        document.querySelector('#totalCredit').textContent = credits;
+        totalCredit.textContent = credits;
         } else if( credits <= 0 ){ gameMes ('You lost all your clothes! Game over');
-                                   document.getElementById('playAgn').style.visibility = 'visible';
-                                   document.getElementById('betBtn').disabled = true;
-                                   document.getElementById('spinBtn').disabled = true;
-                                   document.getElementById('stopBtn').disabled = true;
+                                   playAgain.style.visibility = 'visible';
+                                   betButton.disabled = true;
+                                   spinButton.disabled = true;
+                                   stopButton.disabled = true;
                                     }
 
        
@@ -76,12 +77,15 @@ function addBet () {
 function init() {
     credits = 100;
     bet = 0;
-    document.querySelector('#totalBet').textContent = 0;
-    document.querySelector('#totalCredit').textContent = 100;
-    document.getElementById('playAgn').style.visibility = 'hidden';
-    document.getElementById('betBtn').disabled = false;
-    document.getElementById('spinBtn').disabled = false;
-    document.getElementById('stopBtn').disabled = false;
+    totalBet.textContent = 0;
+    totalCredit.textContent = 100;
+    playAgain.style.visibility = 'hidden';
+    betButton.disabled = false;
+    spinButton.disabled = false;
+    stopButton.disabled = false;
+    dgt0.innerHTML = '<img src="imgs/GA.png">';
+    dgt1.innerHTML = '<img src="imgs/GA.png">';
+    dgt2.innerHTML = '<img src="imgs/GA.png">';
     gameMes ('This is a new adventure for you!');
   }
 
@@ -89,29 +93,46 @@ function init() {
   let cnt0 = 0;
   let cnt1 = 0;
   let cnt2 = 0;
+  let spinCounter = 0;
 
   function gamePlay(){
 
+    // let dgt = ['dgt0', 'dgt1', 'dgt2'];
+    // for (let k=0; k <=2; k++){
     
-        let dig0 = randomInt(randMin, randMax);
-        dgt0.innerHTML = '<img src="imgs/' + dig0 + '.png">';
-        let dig1 = randomInt(randMin, randMax);
-        dgt1.innerHTML = '<img src="imgs/' + dig1 + '.png">';
-        let dig2 = randomInt(randMin, randMax);
-        dgt2.innerHTML = '<img src="imgs/' + dig2 + '.png">';
-        spinCounter = spinCounter + 1;        
-        if(spinCounter<40){
-         setTimeout(gamePlay,gamePlayTimeOut); 
-        }
+    // window['dig'+k] = randomInt(randMin, randMax);
+    // dgt[0].innerHTML = '<img src="imgs/' + window['dig'+k] + '.png">';
+    // spinCounter = spinCounter + 1;       
+    
+    // console.log(spinCounter);
+    // if(spinCounter<40){
+    //  setTimeout(gamePlay,gamePlayTimeOut); 
+    // }
 
-        spinSound.play();
-        
-        if(spinCounter === 40){ checkTheWinner(); }
+    // spinSound.play();
+    
+    // if(spinCounter === 40){ checkTheWinner(); }
+
+    // }
+    // }
 
 
+
+    let dig0 = randomInt(randMin, randMax);
+    dgt0.innerHTML = '<img width="80" height="90" src="imgs/' + dig0 + '.png">';
+    let dig1 = randomInt(randMin, randMax);
+    dgt1.innerHTML = '<img width="80" height="90" src="imgs/' + dig1 + '.png">';
+    let dig2 = randomInt(randMin, randMax);
+    dgt2.innerHTML = '<img width="80" height="90" src="imgs/' + dig2 + '.png">';
+    spinCounter = spinCounter + 1;        
+    if(spinCounter<40){
+     setTimeout(gamePlay,gamePlayTimeOut); 
     }
 
-
+    spinSound.play();
+    
+    if(spinCounter === 40){ checkTheWinner(); }
+  }
 
     
     function render(){
