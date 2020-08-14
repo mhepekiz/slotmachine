@@ -34,6 +34,9 @@ https://mhepekiz.github.io/slotmachine - CLICK TO PLAY!
 
 PS : I added many different sounds to my game. I love this one as main sound ( https://freesound.org/people/theblockofsound235/sounds/223898/ - CLICK TO LISTEN ) but due to Google Chrome policies we can't use auto play if browser not setup to approve this. Only if player interacts with game we can play. 
 
+## Next Steps 
+
+First of all I need some rest for the weekend!
 
 ```
 1) Improvement on CSS
