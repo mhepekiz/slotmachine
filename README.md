@@ -2,7 +2,7 @@
 
 You can lost when you win! Weird browser game for this weird time of the world!
 
-A slot machine (American English), known variously as a fruit machine (British English), puggy (Scottish English),[1] the slots (Canadian English and American English), poker machine/pokies (Australian English and New Zealand English), fruities (British English) or slots (American English), is a gambling machine that creates a game of chance for its customers. Slot machines are also known pejoratively as one-armed bandits due to the large mechanical levers affixed to the sides of early mechanical machines and their ability to empty players' pockets and wallets as thieves would.[2] (Wikipedia)
+```A slot machine (American English), known variously as a fruit machine (British English), puggy (Scottish English),[1] the slots (Canadian English and American English), poker machine/pokies (Australian English and New Zealand English), fruities (British English) or slots (American English), is a gambling machine that creates a game of chance for its customers. Slot machines are also known pejoratively as one-armed bandits due to the large mechanical levers affixed to the sides of early mechanical machines and their ability to empty players' pockets and wallets as thieves would.[2] (Wikipedia)```
 
 Slot machine game is one of the most known games of the world. Usually it calls with casinos but it's also a computer game since early evolution of the personal computers.
 
