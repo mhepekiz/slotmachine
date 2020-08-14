@@ -9,6 +9,8 @@ Slot machine game is one of the most known games of the world. Usually it calls 
 I decided to look from another perspective to this game. All players want to win and collect more money but this game has a trap! If you're really unlucky you may found 3 CORONAVIRUS icon. That means you won BET x 3 money but lost your life. In this case your last earning will be a inheritance to your kids :)
 
 
+## Screenshot
+
 <img src="https://i.imgur.com/PgsXleF.png" alt="Slot Machine Corona" />
 
 <img src="https://i.imgur.com/chOeIeL.png" alt="Slot Machine Corona" />
