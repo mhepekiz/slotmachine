@@ -1,35 +1,47 @@
-# Slot Machine
+# Covid Slot Machine
+
+You can lost when you win! Weird browser game for this weird time of the world!
+
+"One-Armed Bandit" redirects here. For the album, see One-Armed Bandit (album).
+"Slot Machine" redirects here. For the band, see Slot Machine (band).
+"Fruit machine" redirects here. For other uses, see Fruit machine (disambiguation).
+"Pokies" redirects here. For other uses, see Pokey (disambiguation).
+
+Slot machine game is one of the most known games of the world. Usually it calls with casinos but it's also a computer game since early evolution of the personal computers.
+
+I decided to look from another perspective to this game. All players want to win and collect more money but this game has a trap! If you're really unlucky you may found 3 CORONAVIRUS icon. That means you won BET x 3 money but lost your life. In this case your last earning will be a inheritance to your kids :)
 
 
-### Wireframe of the game
+<img src="https://i.imgur.com/PgsXleF.png" alt="Slot Machine Corona" />
 
-To reach game's wireframe [Please Click](https://imgur.com/wUdC8nA).
+<img src="https://i.imgur.com/chOeIeL.png" alt="Slot Machine Corona" />
+
+<img src="https://i.imgur.com/AFzqkgK.png" alt="Slot Machine Corona" />
+
+<img src="https://i.imgur.com/EuZYHQ6.png" alt="Slot Machine Corona" />
 
 
-### Pseudocode
+## Technologies Used
+
+	```
+	- HTML
+	- CSS
+	- Javascript
+	```
+
+## Getting Started
+
+
+https://mhepekiz.github.io/slotmachine - CLICK TO PLAY!
+
+PS : I added many different sounds to my game. I love this one as main sound ( https://freesound.org/people/theblockofsound235/sounds/223898/ - CLICK TO LISTEN ) but due to Google Chrome policies we can't use auto play if browser not setup to approve this. Only if player interacts with game we can play. 
+
 
 ```
-1) Define required constants
-	- Bet
-	- Player Credits
-	
-2) Define required variables used to track the state of the game
-	- Result of the spin
-	- Bet by player
-	- Check player credits for next game
+1) Improvement on CSS
 
-3) Store elements on the page that will be accessed in code more than once in variables to make code more concise, readable and performant.
-	- Messages (New game, win, lost, not enough credit, game over)
-	- Visual things (Image paths etc)
+2) Play the opening music (Can't play this time because of Google Chrome policies)
 
-4) Upon loading the app should:
-	4.1) Initialize the state variables
-	4.2) Render those values to the page
-	4.3) Wait for the user to click a button. Player can't SPIN before adding BET
+3) Smoother reel movement
 
-5) SPIN the slot machine, get random variables for result 
-
-6) If player wins add coins to player's account otherwise wait for new coins
-
-7) If player hasn't enough money disable buttons and show REPLAY button
 ```

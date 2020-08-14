@@ -27,6 +27,7 @@ let digit1 = document.querySelector('#digit1');
 let digit2 = document.querySelector('#digit2');
 let totalBet = document.querySelector('#betAmount');
 let totalCredit = document.querySelector('#creditAmount');
+let totalCreditP = document.querySelector('#totalCredit');
 let playAgain = document.getElementById('playAgn');
 let betButton = document.getElementById('betBtn');
 let spinButton = document.getElementById('spinBtn');
@@ -67,6 +68,7 @@ function checkTheWinner(){
             betButton.disabled = true;
             spinButton.disabled = true;
             playAgain.style.visibility = 'visible';
+            totalCreditP.style.visibility = 'hidden';
             GAMEOVERSOUND.play();
         }
         else if((checkArray[0] === checkArray[1]) || (checkArray[1] === checkArray[2])){ 
@@ -101,6 +103,7 @@ function addBet () {
                                    ADDBETSOUND.play();
                                    gameMes ('You lost all your money and clothes! Game over');
                                    playAgain.style.visibility = 'visible';
+                                   totalCreditP.style.visibility = 'hidden';
                                    betButton.disabled = true;
                                    spinButton.disabled = true;
                                    GAMEOVERSOUND.play();
@@ -118,6 +121,7 @@ function init() {
     totalBet.textContent = 0;
     totalCredit.textContent = 100;
     playAgain.style.visibility = 'hidden';
+    totalCreditP.style.visibility = 'visible';
     betButton.disabled = false;
     spinButton.disabled = false;
     digit0.innerHTML = '<img src="imgs/GA.png">';
