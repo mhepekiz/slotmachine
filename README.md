@@ -2,10 +2,10 @@
 
 You can lost when you win! Weird browser game for this weird time of the world!
 
-"One-Armed Bandit" redirects here. For the album, see One-Armed Bandit (album).
-"Slot Machine" redirects here. For the band, see Slot Machine (band).
-"Fruit machine" redirects here. For other uses, see Fruit machine (disambiguation).
-"Pokies" redirects here. For other uses, see Pokey (disambiguation).
+- "One-Armed Bandit" redirects here. For the album, see One-Armed Bandit (album).
+- "Slot Machine" redirects here. For the band, see Slot Machine (band).
+- "Fruit machine" redirects here. For other uses, see Fruit machine (disambiguation).
+- "Pokies" redirects here. For other uses, see Pokey (disambiguation).
 
 Slot machine game is one of the most known games of the world. Usually it calls with casinos but it's also a computer game since early evolution of the personal computers.
 
