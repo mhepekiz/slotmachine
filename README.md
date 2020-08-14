@@ -23,11 +23,9 @@ I decided to look from another perspective to this game. All players want to win
 
 ## Technologies Used
 
-	```
 	- HTML
 	- CSS
 	- Javascript
-	```
 
 ## Getting Started
 
