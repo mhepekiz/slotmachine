@@ -9,8 +9,8 @@ const PAYOUTSOUND = new Audio('sounds/payout.wav');
 const ADDBETSOUND = new Audio('sounds/coin.mp3');
 const GAMEOVERSOUND = new Audio('sounds/gameover.wav');
 
-const RANDMIN = 1;
-const RANDMAX = 10;
+const RANDMIN = 3;
+const RANDMAX = 6;
 const GAMEPLAYTIMEOUT = 40;
 
 /*----- app's state (variables) -----*/
