@@ -15,39 +15,40 @@
 </head>
 <body onload="init()">
 
+<main>
+    
+    
+    <container>
     <header><p>Sl&nbsp;tMachine</p><span id="covid"><img id="covid" src="imgs/cov.png" width="70" height="70"></span></header>
-
-
-    
-    <container id="main">
-        <div class="slot-machine-box">
-                <div class="machine">
-                    <div class="showBet">BET<br>CREDIT</div>
-                    
-                    <div class="console"><img id="console" src="imgs/machine.png"></div>
-                    <div class="spinner">
-                        <ul id="spin">
-                        <li class="digit" id="digit0"></li>
-                        <li class="digit" id="digit1"></li>
-                        <li class="digit" id="digit2"></li>
+        <section class="machine">
+            <div class="infoBox" id="infoBox"></div>
+            <div class="box">
+                <div> 
+                    <ul id="spin">
+                    <li class="digit" id="digit0"></li>
+                    <li class="digit" id="digit1"></li>
+                    <li class="digit" id="digit2"></li>
                     </ul>
-                    </div>
-                    <div class="bet-button"><button class="betBtn" id="betBtn">BET</button></div>
-                    <div class="spin-button"><button class="spinBtn" id="spinBtn">SPIN</button></div>
-                    <div class="stop-button"><button class="stopBtn" id="stopBtn">STOP</button></div>
-                    <div class="playAgain-button"><button class="playAgn" id="playAgn">PLAY AGAIN</button></div>
+                </div>                
+            </div>
 
+            <!-- BUTTONS -->
 
-                </div>
-                <div class="good-luck">GOOD unLUCK Y'ALL!</div>
-                <div class="infoBox" id="infoBox"></div>
-                <div class="total-bet" id="totalBet">0</div>
-                <div class="player-info">PLAYER 1</div>
-                <div class="totalCredit" id="totalCredit">100</div>
-            
+                <div class="bet-button"><button class="betBtn" id="betBtn">BET</button></div>
+                <div class="spin-button"><button class="spinBtn" id="spinBtn">SPIN</button></div>
+                <div class="reset-button"><button class="resetBtn" id="resetBtn">RESET</button></div>
+                <div class="playAgain-button"><button class="playAgn" id="playAgn">PLAY AGAIN</button></div>
+          
 
-        </div>
+                <!-- CREDIT AND BETS -->
+
+                 <div class="totalCredit" id="totalCredit">CREDIT :<span id="creditAmount"></span></div>
+                 <div class="totalBet" id="totalBet">BET :<span id="betAmount">0</span></div>            
+        </section>
     </container>
+
+    <footer class="flex-ctr">COVID SlotMachine by GA SEI Rookie Mustafa V0.1ß</footer>
     
+
 </body>
 </html>

@@ -1,207 +1,566 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-@media screen and (max-width: 700px){ html,body {min-width:800px} }
 
 
-
-body {
-    /* background-image: linear-gradient(-20deg, #3e6aac, #00a2ff); */
-    background-color: #efefef;
-    height: 100vh;
-    margin: 0;
+* {
+  /* height & width now includes border & padding */
+  box-sizing: border-box;
 }
+
+ body {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+
+.container {
+  grid-template-columns: 0px auto 0px;
+  grid-template-rows: 150px auto 90px;
+}
+
 
 header {
-    display: flex;
-    justify-content: center;
-    height: 150px;
-    background-color: #ffc000;
-  }
-
-  @-webkit-keyframes fadeinout {
-    50% { opacity: 1; }
-  }
-  
-  @keyframes fadeinout {
-    50% { opacity: 1; }
-  }
-
-  p {
-
-    font-family: 'Shrikhand', serif;
-    font-size: 50px;
-    color: #ff5100;
-    align-items: center;
-    -webkit-animation: fadeinout 2s linear forwards infinite;
-    animation: fadeinout 2s linear forwards infinite;
-    opacity: 0;
-    text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #fff,
-    0 0 80px #fff,
-    0 0 90px #fff,
-    0 0 100px #fff,
-    0 0 150px #fff;
-    letter-spacing: 5px;
-    z-index: 50;
-  }
-
-
-  div.showBet {
-
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    color: #292929;
-    align-items: right;
-    position: relative;
-    left: 120px;
-    top: 50px;
-    z-index: 15;
-  }
-
-  
-
-
-
-  span {
-    position: relative;
-    left: -340px;
-    top: 50px;
-  }
-
-  img.covid {
-    opacity: 0.5;
-  }
-  div.console {
-    position: relative;
-    left: 120px;
-    top: -50px;
-    z-index: 1;
-  }
-
-  div.spinner {
-    position: relative;
-    left: 140px;
-    top: -320px;
-    z-index: 2;
-  }
-
-container {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  background-color: #ffc000;
 }
 
-#spinner {
-    width:100%;
-    text-align:center;
+@-webkit-keyframes fadeinout {
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  50% { opacity: 1; }
+}
+
+p {
+
+  font-family: 'Shrikhand', serif;
+  font-size: 50px;
+  color: #ff5100;
+  align-items: center;
+  -webkit-animation: fadeinout 2s linear forwards infinite;
+  animation: fadeinout 2s linear forwards infinite;
+  opacity: 0;
+  text-shadow:
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px #fff,
+  0 0 80px #fff,
+  0 0 90px #fff,
+  0 0 100px #fff,
+  0 0 150px #fff;
+  letter-spacing: 5px;
+  z-index: 50;
+}
+
+section.machine {
+background-color: ffffff;
+height: 85%;
+align-items: center;
+text-align: center;
+
 }
 
 ul#spin {
-	min-width: 696px;
-	list-style: none;	}
-	ul#spin li {
-		display: inline;
+  min-width: 696px;
+  list-style: none; }
+  ul#spin li {
+    display: inline;
+    }
+
+
+
+
+ footer {
+   background-color: #ff5100;
+   text-align: center;
+   font-size: 10px;
+   color: #ffffff;
+   font-weight: 800;
+ }
+
+ span {
+  position: relative;
+  left: -340px;
+  top: 50px;
+}
+
+img.covid {
+  opacity: 0.5;
+}
+
+
+ .box {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.box div {
+  margin-top: -50px;
+  width: 450px;
+  height: 482px;
+  background-image: url('../imgs/machine.png');
+}
+
+
+ul#spin {
+  list-style: none;
+  position: relative;
+  left: -183px;
+  top: 240px;
+  z-index: 1;
+}
+  ul#spin li {
+    display: inline;
+    }
+
+    li.digit {
+      margin-right: 7px;  
+    }
+
+
+
+    button.betBtn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #ffc000;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 10ch;
+      min-height: 34px;
+      text-align: center;
+      line-height: 1.1;
+      width: 90px;
+      margin-bottom: 5px;
+      position: relative;
+      left: -135px;
+      top: -115px;
+      z-index: 5;
+    }
+  
+    #betBtn:hover
+    {
+      background-color: #ff0000;
+    }
+  
+    button.spinBtn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #ffc000;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 9ch;
+      min-height: 34px;
+      text-align: center;
+      line-height: 1.1;
+      width: 90px;
+      margin-bottom: 5px;
+      background-image: linear-gradient(rgb(247, 148, 0), rgb(194, 103, 0));
+      background-size: 100% 200%;
+      transition: background-position .1s;
+      position: relative;
+      left: -42px;
+      top: -154px;
+      z-index: 8;
+    }
+  
+    
+    #spinBtn:hover
+    {
+      background-position: 0 -50%;
+    }
+  
+    
+  
+    button.resetBtn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #ffc000;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 10ch;
+      min-height: 34px;
+      text-align: center;
+      line-height: 1.1;
+      width: 90px;
+      margin-bottom: 5px;
+      position: relative;
+      left: 50px;
+      top: -193px;
+      z-index: 8;
+    }
+  
+    #resetBtn:hover
+    {
+      background-color: #ff0000;
+    }
+
+    button.playAgn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #f87800;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 10ch;
+      min-height: 30px;
+      text-align: center;
+      line-height: 1.1;
+      width: 200px;
+      margin-bottom: 5px;
+      position: relative;
+      left: -45px;
+      top: -173px;
+      z-index: 8;
+    }
+  
+    #stopBtn:hover
+    {
+      background-color: #ff0000;
+    }
+
+.totalCredit {
+  font-family: 'Oswald', serif ;
+  font-size: 36px;
+  color: #000000; 
+  position: relative;
+  left: -125px;
+  top: -153px;
+  z-index: 20;
+}
+
+.totalCredit > span {
+  position: relative;
+  color: #ff0000; 
+  left: 15px;
+  top: 0px;
+  z-index: 20;
+}
+
+.totalBet {
+  font-family: 'Oswald', serif ;
+  font-size: 36px;
+  color: #000000; 
+  position: relative;
+  left: 45px;
+  top: -205px;
+  z-index: 20;
+}
+
+.totalBet > span {
+  position: relative;
+  color: #ff0000; 
+  left: 15px;
+  top: 0px;
+  z-index: 20;
+}
+
+.infoBox {
+  font-family: 'Oswald', serif ;
+  font-size: 36px;
+  color: #d87a00; 
+  position: relative;
+  left: -50px;
+  top: 520px;
+  z-index: 20;
+}
+
+ /* THIS IS MOBILE */
+
+  @media only screen and (max-width: 728px) {
+    body {
+      display: grid;
+      height: 100vh;
+      margin: 0;
+      font-family: Helvetica;
     }
     
-.playAgain-button {
-    visibility: hidden;
-}
-
-li.digit {
-  margin-right: 15px;  
-}
-
-
-button.betBtn {
-    border: none;
-    background-color: transparent;
-    font-family: Helvetica;
-    padding: 0;
-    cursor: pointer;
-    background-color: #ffc000;
-    color: #fff;
-    border-radius: 1px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-    padding: 0.25em 0.75em;
-    min-width: 10ch;
-    min-height: 34px;
+    header {
+      display: flex;
+      justify-content: center;
+      height: 100px;
+      background-color: #ffc000;
+    }
+    
+    @-webkit-keyframes fadeinout {
+      50% { opacity: 1; }
+    }
+    
+    @keyframes fadeinout {
+      50% { opacity: 1; }
+    }
+    
+    p {
+    
+      font-family: 'Shrikhand', serif;
+      font-size: 30px;
+      color: #ff5100;
+      align-items: center;
+      -webkit-animation: fadeinout 2s linear forwards infinite;
+      animation: fadeinout 2s linear forwards infinite;
+      opacity: 0;
+      text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 90px #fff,
+      0 0 100px #fff,
+      0 0 150px #fff;
+      letter-spacing: 5px;
+      z-index: 50;
+    }
+    
+    section.machine {
+    background-color: ffffff;
+    height: 100%;
+    align-items: center;
     text-align: center;
-    line-height: 1.1;
-    width: 90px;
-    margin-bottom: 5px;
-    position: relative;
-    left: 175px;
-    top: -306px;
-    z-index: 5;
-  }
+    
+    }
 
-  #betBtn:hover
-  {
-    background-color: #ff0000;
-  }
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 490px;
+    }
+    
+    .box div {
+      margin-top: 5px;
+      width: 400px;
+      height: 428px;
+      background-image: url('../imgs/machinesml.png');
+    }
 
-  button.spinBtn {
-    border: none;
-    background-color: transparent;
-    font-family: Helvetica;
-    padding: 0;
-    cursor: pointer;
-    background-color: #ffc000;
-    color: #fff;
-    border-radius: 1px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-    padding: 0.25em 0.75em;
-    min-width: 9ch;
-    min-height: 34px;
-    text-align: center;
-    line-height: 1.1;
-    width: 90px;
-    margin-bottom: 5px;
-    background-image: linear-gradient(rgb(247, 148, 0), rgb(194, 103, 0));
-    background-size: 100% 200%;
-    transition: background-position .1s;
-    position: relative;
-    left: 277px;
-    top: -345px;
-    z-index: 8;
-  }
+    ul#spin {
+      list-style: none;
+      position: relative;
+      left: -203px;
+      top: 210px;
+      z-index: 1;
+    }
+      ul#spin li {
+        display: inline;
+        }
+    
+        li.digit {
+          margin-right: 7px;  
+        }
+
+        
+
+    span {
+      position: relative;
+      left: -220px;
+      top: 30px;
+    }
+
+    span > img {
+      max-width: 40px;
+      height: auto;
+    }
+
+
+    li > img {
+      max-width: 70px;
+      height: auto;
+    }
 
   
-  #spinBtn:hover
-  {
-    background-position: 0 -50%;
-  }
 
+
+    button.betBtn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #ffc000;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 10ch;
+      min-height: 28px;
+      text-align: center;
+      line-height: 1.1;
+      width: 70px;
+      margin-bottom: 5px;
+      position: absolute;
+      left: 90px;
+      top: 435px;
+      z-index: 5;
+    }
   
+    #betBtn:hover
+    {
+      background-color: #ff0000;
+    }
+  
+    button.spinBtn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #ffc000;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 9ch;
+      min-height: 28px;
+      text-align: center;
+      line-height: 1.1;
+      width: 70px;
+      margin-bottom: 5px;
+      background-image: linear-gradient(rgb(247, 148, 0), rgb(194, 103, 0));
+      background-size: 100% 200%;
+      transition: background-position .1s;
+      position: absolute;
+      left: 172px;
+      top: 435px;
+      z-index: 8;
+    }
+  
+    
+    #spinBtn:hover
+    {
+      background-position: 0 -50%;
+    }
+  
+    
+  
+    button.resetBtn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #ffc000;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 10ch;
+      min-height: 28px;
+      text-align: center;
+      line-height: 1.1;
+      width: 70px;
+      margin-bottom: 5px;
+      position: absolute;
+      left: 250px;
+      top: 435px;
+      z-index: 8;
+    }
+  
+    #resetBtn:hover
+    {
+      background-color: #ff0000;
+    }
 
-  button.stopBtn {
-    border: none;
-    background-color: transparent;
-    font-family: Helvetica;
-    padding: 0;
-    cursor: pointer;
-    background-color: #ffc000;
-    color: #fff;
-    border-radius: 1px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-    padding: 0.25em 0.75em;
-    min-width: 10ch;
-    min-height: 34px;
-    text-align: center;
-    line-height: 1.1;
-    width: 90px;
-    margin-bottom: 5px;
-    position: relative;
-    left: 380px;
-    top: -385px;
-    z-index: 8;
-  }
+    button.playAgn {
+      border: none;
+      background-color: transparent;
+      font-family: Helvetica;
+      padding: 0;
+      cursor: pointer;
+      background-color: #f87800;
+      color: #fff;
+      border-radius: 1px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      padding: 0.25em 0.75em;
+      min-width: 10ch;
+      min-height: 28px;
+      text-align: center;
+      line-height: 1.1;
+      width: 200px;
+      margin-bottom: 5px;
+      position: absolute;
+      left: 105px;
+      top: 480px;
+      z-index: 8;
+    }
+  
+    #stopBtn:hover
+    {
+      background-color: #ff0000;
+    }
 
-  #stopBtn:hover
-  {
-    background-color: #ff0000;
+    .totalCredit {
+      font-family: 'Oswald', serif ;
+      font-size: 26px;
+      color: #000000; 
+      position: absolute;
+      left: 60px;
+      top: 527px;
+      z-index: 20;
+    }
+    
+    .totalCredit > span {
+      position: absolute;
+      color: #ff0000; 
+      left: 100px;
+      top: 0px;
+      z-index: 20;
+    }
+
+    
+    .totalBet {
+      font-family: 'Oswald', serif ;
+      font-size: 26px;
+      color: #000000; 
+      position: absolute;
+      left: 265px;
+      top: 527px;
+      z-index: 20;
+    }
+    
+    .totalBet > span {
+      color: #ff0000; 
+      position: absolute;
+      left: 65px;
+      top: 0px;
+      z-index: 20;
+    }
+
+    .infoBox {
+      font-family: 'Oswald', serif ;
+      font-size: 16px;
+      color: #d87a00; 
+      position: absolute;
+      left: 50px;
+      top: 560px;
+      z-index: 20;
+    }
+
+
   }
